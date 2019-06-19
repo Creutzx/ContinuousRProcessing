@@ -8,19 +8,19 @@ library(dplyr)
 
 
 # Designate the folder where you are getting the .Rdata files.  Must end with '/'.
-shiny_path <-  "Check_shinyapp/data/"
+shiny_path <-  "//deqlab1/WQM/DataManagement/ContinuousDataRTool/Check_shinyapp/data/"
 
 # Designate the folder where you are getting the .RData files, the save_path from the 04 Script.  Must end with '/'.
-in_path <- "//deqlab1/Vol_Data/ODA/2018/CurrySWCD/Routputs/"
+in_path <- "//deqlab1/WQM/TMDL/aWestern Region/MidCoast/AlseaBeaver/Alsea201809/DataWrk/RH1810146/ROutput/"
 
 # Designate the folder where you will Save the outputs...this may be the same as above. Must end with '/'.
-out_path <- "//deqlab1/Vol_Data/ODA/2018/CurrySWCD/Routputs/"
+out_path <- "//deqlab1/WQM/TMDL/aWestern Region/MidCoast/AlseaBeaver/Alsea201809/DataWrk/RH1810146/ROutput/"
 
 # Enter VolWQdb.t_Submission Number as text
-sbm <- '0236'
+sbm <- '1810146'
 
 # AWQMS Project 
-aprj <- 'ODEQVolMonWQProgram'
+aprj <- 'TMDL'
 
 #  Get look up table for characteristics
 load('//deqlab1/wqm/DataManagement/ContinuousDataRTool/ConCharInfo.RData')
@@ -38,9 +38,7 @@ setwd(shiny_path)
 
 
 #Get the names for the .Rdata graded files
-#fnames <- list.files(path = shiny_path, pattern = ".R[Dd]ata", full.names = FALSE)
-fnames <- list.files(pattern = ".R[Dd]ata", full.names = FALSE)
-
+fnames <- list.files(path = shiny_path, pattern = ".R[Dd]ata")
 datfls <- fnames[grep(paste0("^",sbm,".+_.Rdata"),fnames)] # data files
 #datfls <- fnames[grep(paste0("^TMDL",".+_.Rdata"),fnames)] # data files
 audfls <- fnames[grep(".AUDIT_INFO.Rdata",fnames)] # audit files
@@ -255,4 +253,3 @@ write.csv(dysm, file = paste0(out_path, aprj, sbm,'DailySumStatCnDataAwqmsUpload
 
 #  Files to upload to AWQMS end in ContinuousDataAwqmsUpload.csv, ContinuousDataAwqmsInfo.csv (meta data), ContinuousAuditDataAwqmsUpload.csv,
 # DailySumStatCnDataAwqmsUpload.csv.  
-

@@ -8,36 +8,36 @@ library(lubridate)
 #    SiteMasterInfo
 #    PrePostResults
 #    FieldAuditResults
-#    And a single sheet for each unique logger ID
+#    Each unique logger ID will have it's own worksheet--there should be several of these
 #
 #Expected format for SiteMasterInfo:
 #Header info takes up rows 1 through 5 with column names in row 6
 #Columns to include in this exact format:
 #    Logger_ID
 #    LASAR_ID
-#    Station Description
+#    Station_Description
 #
 #Expected format for PrePostResults:
 #No header info. Column names in row 1.
 #Columns to include in this exact format:
 #    LOGGER_ID 
-#    DATA QUALITY LEVEL
-#Column LOGGER ID must at least contain the same logger ids as are in SiteMasterInfo
+#    DQL    (DATA QUALITY LEVEL)
+#The column named LOGGER_ID must at least contain the same logger ids as are in SiteMasterInfo
 #
 #Expected format for FieldAuditResults:
 #No head info. Column names in row 1.
 #Columns to include in this exact format:
 #    LOGGER_ID
 #    PARAMETER (DO,TEMP,COND,DOs,adjDO,TURB,Q,PH) 
-#         each parameter reported must be listed regardless of the presence of audit info for parameter
+#    [BRC: is this true?] each parameter reported must be listed regardless of the presence of audit info for parameter
 #    DATE
 #    TIME
 #    AUDIT_RESULT
 #    COMMENTS
 #
 #
-#Expected format for worksheets with logger ID as their name:
-#Header infro on rows 1-4. COlumn names in row 5.  Number of columns depends on the number of continuous parameters
+#Expected format for worksheets with the logger's ID as the worksheet's name:
+#Header infro on rows 1-4. COlumn names in row 5. Number of columns depends on the number of continuous parameters
 #but there must always be one row with results and a second with data quality levels for each parameter.
 #    DATE
 #    TIME
@@ -47,15 +47,15 @@ library(lubridate)
 #Note: the last column name is DQL because TEMP is contained in row 4 which is a skipped row
 
 #Set the data file path and file that you want to process
-src_file <- "//deqlab1/WQM/TMDL/RDataManagement/1810145_WICO_201708to201803/Wico20170815Rfu_4r.xlsx"
+src_file <- "//deqlab1/Vol_Data/WallaWalla/2014-2018/4R_2018_WallaWallaRiverContTempData_Sub.xlsx"
 
-SubID <- '1810145' # Enter the submission ID from VolWQDB
+SubID <- '0238' # Enter the submission ID from VolWQDB
 
 
 
 #Set the output location where the shiny app can use it
-save_dir <- '//deqlab1/WQM/TMDL/RDataManagement/ContinuousDataRTool/Steve/Check_shinyapp/data'
-
+save_dir <- '//deqlab1/WQM/Volunteer Monitoring/datamanagement/R/ContinuousDataReview/2018-WallaWalla/ContinuousRprocessing/Check_shinyapp/data'
+#save_dir <- '//deqlab1/WQM/TMDL/RDataManagement/ContinuousDataRTool/Steve/Check_shinyapp/data'
 
 
 # When OLD TEMPERATURE AUDIT FORMAT is used, you will need to upload these files output from CnTmpOldAudit.R 

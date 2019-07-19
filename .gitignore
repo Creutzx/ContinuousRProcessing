@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+*Check_shinyapp/data/
+*Check_shinyapp\data\

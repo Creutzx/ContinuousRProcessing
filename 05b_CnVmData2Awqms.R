@@ -8,19 +8,19 @@ library(dplyr)
 
 
 # Designate the folder where you are getting the .Rdata files.  Must end with '/'.
-shiny_path <-  "//deqlab1/WQM/DataManagement/ContinuousDataRTool/Check_shinyapp/data/"
+shiny_path <-  "//deqlab1/WQM/DataManagement/ContinuousDataRTool/Brian/Check_shinyapp/data/"
 
 # Designate the folder where you are getting the .RData files, the save_path from the 04 Script.  Must end with '/'.
-in_path <- "//deqlab1/WQM/TMDL/aWestern Region/MidCoast/AlseaBeaver/Alsea201809/DataWrk/RH1810146/ROutput/"
+in_path <- "//deqlab1/Vol_Data/WallaWalla/2014-2018/2018_WWBWC_cn/ROutput/"
 
 # Designate the folder where you will Save the outputs...this may be the same as above. Must end with '/'.
-out_path <- "//deqlab1/WQM/TMDL/aWestern Region/MidCoast/AlseaBeaver/Alsea201809/DataWrk/RH1810146/ROutput/"
+out_path <- "//deqlab1/Vol_Data/WallaWalla/2014-2018/2018_WWBWC_cn/ROutput/"
 
 # Enter VolWQdb.t_Submission Number as text
-sbm <- '1810146'
+sbm <- '0238'
 
 # AWQMS Project 
-aprj <- 'TMDL'
+aprj <- 'ODEQVolMonWQProgram'
 
 #  Get look up table for characteristics
 load('//deqlab1/wqm/DataManagement/ContinuousDataRTool/ConCharInfo.RData')

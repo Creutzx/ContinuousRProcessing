@@ -5,13 +5,13 @@
 library(RODBC)
 
 # Designate the folder where you are getting the .RData files, the save_path from the 04 Script.  Must end with '/'.
-in_path <- "V:/umpqua/2016/Cont Temp/Routput/" 
+in_path <- "//deqlab1/Vol_Data/WallaWalla/2014-2018/2018_WWBWC_cn/ROutput/" 
 
 # Designate the folder where you will Save the outputs...this may be the same as above. Must end with '/'.
-out_path <- "V:/umpqua/2016/Cont Temp/Routput/"
+out_path <- "//deqlab1/Vol_Data/WallaWalla/2014-2018/2018_WWBWC_cn/ROutput/"
 
 # Enter VolWQdb.t_Submission Number as text
-sbm <- '0218'
+sbm <- '0238'
 
 # AWQMS Project 
 aprj <- 'ODEQVolMonWQProgram'

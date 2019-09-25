@@ -22,18 +22,18 @@ ConCharInfo <- '//deqlab1/wqm/DataManagement/ContinuousDataRTool/ConCharInfo.RDa
  load(ConCharInfo)
 
 ### INPUT provide sampling organization from VolWQdb.tlu_Organization.OrgAbrv
-ORG <- 'WWBWC' 
+ORG <- 'RRBWC' 
 
-SubID <- '0238' # Enter the submission ID from VolWQDB
+SubID <- '0240' # Enter the submission ID from VolWQDB
 
 aprj <- 'ODEQVolMonWQProgram'#  AWQMS Project ID
 
 ###  LOCATION OF DATA FILES TO BE PROCESSED (This shouldn't change BRC: might not be true with version control?)
 #shiny_path <- "Check_shinyapp/data/"
-#shiny_path <- "//deqlab1/WQM/Volunteer Monitoring/datamanagement/R/ContinuousDataReview/2018-WallaWalla/ContinuousRprocessing/Check_shinyapp/data/"
-shiny_path <- "//deqlab1/WQM/DataManagement/ContinuousDataRTool/Brian/"
+shiny_path <- "//deqlab1/WQM/Volunteer Monitoring/datamanagement/R/ContinuousDataReview/2018-ODA-RogueWC/Check_shinyapp/data/"
+#shiny_path <- "//deqlab1/WQM/DataManagement/ContinuousDataRTool/Brian/"
 ###  LOCATION TO SAVE DATA FILES CREATED IN PROCESS
-save_path <- "//deqlab1/Vol_Data/WallaWalla/2014-2018/2018_WWBWC_cn/ROutput"  # No / at end, added in write.csv 
+save_path <- "//deqlab1/Vol_Data/ODA/2018/RogueWC/2018_RRWC_cn/ROutput"  # No / at end, added in write.csv 
 
 
 

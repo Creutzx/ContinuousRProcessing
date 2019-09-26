@@ -8,16 +8,16 @@ library(dplyr)
 
 
 # Designate the folder where you are getting the .Rdata files.  Must end with '/'.
-shiny_path <-  "//deqlab1/WQM/Volunteer Monitoring/datamanagement/R/ContinuousDataReview/2018-ODA-RogueWC/Check_shinyapp/data/"
+shiny_path <-  "//deqlab1/WQM/Volunteer Monitoring/datamanagement/R/ContinuousDataReview/2018-ODA-SSantiamWC/Check_shinyapp/data/"
 
 # Designate the folder where you are getting the .RData files, the save_path from the 04 Script.  Must end with '/'.
-in_path <- "//deqlab1/Vol_Data/ODA/2018/RogueWC/2018_RRWC_cn/ROutput/"
+in_path <- "//deqlab1/Vol_Data/ODA/2018/S_SantiamWC/2018_SSWC_cn/ROutput/"
 
 # Designate the folder where you will Save the outputs...this may be the same as above. Must end with '/'.
-out_path <- "//deqlab1/Vol_Data/ODA/2018/RogueWC/2018_RRWC_cn/ROutput/"
+out_path <- "//deqlab1/Vol_Data/ODA/2018/S_SantiamWC/2018_SSWC_cn/ROutput/"
 
 # Enter VolWQdb.t_Submission Number as text
-sbm <- '0240'
+sbm <- '0241'
 
 # AWQMS Project 
 aprj <- 'ODEQVolMonWQProgram'

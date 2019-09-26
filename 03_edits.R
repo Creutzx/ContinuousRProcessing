@@ -15,20 +15,20 @@ load(filepath)
 
 
 
-#When making adjustments for more than one range copy the code between 
+# When making adjustments for more than one range copy the code between 
 # HERE and TO HERE and past it below in order to maintain a record of the
-# changes you've made to the DQL. It would also be handy if you added a 
-# little explanantion of why you are editing the DQL for that range
+# changes you've made to the DQL. It is also necessary to provide an 
+# explanantion for all edits made to the DQL for that range
 
 # 1
 #HERE
 #To adjust DQL for a specific date range
 #First set the ranges you want to modify and the new DQL to assign
-start_date_time_char <- "2013-06-07 14:15:00"
-end_date_time_char <- "2013-08-22 13:00:00 "
-new_DQL <- 'B'
-# provide a brief justification if necessary.  Comment must be in ''  
-cmnt <- 'Data suggests no deployment audit'
+start_date_time_char <- "YYYY-MM-DD HH:MM:SS"   #replace DATE TIME at left with DATE TIME of first adjusted DQL measurement
+end_date_time_char <- "YYYY-MM-DD HH:MM:SS"     #replace DATE TIME at left with DATE TIME of last adjusted DQL measurement
+new_DQL <- 'X'    #replace X with new DQL when necessary
+# Below, provide a brief justification if any change was made.  Comment must be in ''  
+cmnt <- 'No Changes Made--BRC--9-26-2019'
 
 #Run these to actually update the file
 start <- as.POSIXct(strptime(start_date_time_char, format = "%Y-%m-%d %H:%M:%S"))
